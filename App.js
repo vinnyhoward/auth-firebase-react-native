@@ -3,18 +3,19 @@ import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import firebase from 'firebase';
 import { Header, Button, Spinner } from './src/components/common';
 import LoginForm from './src/components/LoginForm';
+import { APIKEY, AUTHDOMAIN, DATABASEURL, PROJECTID, STORAGEBUCKET, MESSAGINGSENDERID } from 'babel-dotenv';
 
 export default class App extends React.Component {
   state={ loggedIn: null }
 
   componentWillMount(){
     firebase.initializeApp({
-        apiKey: "AIzaSyAcA9ch3W2rgP5XUhKaUVgsUx3swNPdFwk",
-        authDomain: "auth-b1f43.firebaseapp.com",
-        databaseURL: "https://auth-b1f43.firebaseio.com",
-        projectId: "auth-b1f43",
-        storageBucket: "auth-b1f43.appspot.com",
-        messagingSenderId: "1028838718022"
+        apiKey: APIKEY,
+        authDomain: AUTHDOMAIN,
+        databaseURL: DATABASEURL,
+        projectId: PROJECTID,
+        storageBucket: STORAGEBUCKET,
+        messagingSenderId: MESSAGINGSENDERID
     })
 
     firebase.auth().onAuthStateChanged((user) => {
