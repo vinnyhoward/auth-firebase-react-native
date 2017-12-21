@@ -10,7 +10,7 @@ export default class LoginForm extends Component {
       email: '', 
       password: '', 
       error: '',
-      loading: false
+      loading: false,
     }
     this.onButtonPress = this.onButtonPress.bind(this)
   }
