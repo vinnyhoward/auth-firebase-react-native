@@ -20,6 +20,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "auth0-js": "^9.3.3",
     "babel-plugin-dotenv": "^0.1.0",
     "expo": "^23.0.4",
     "firebase": "^4.8.0",
